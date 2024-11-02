@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="562.0" prefWidth="388.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="158.0" layoutY="28.0" prefHeight="17.0" prefWidth="68.0" text="Reserva " />
+      <ComboBox fx:id="CoxVehiculo" layoutX="44.0" layoutY="229.0" onAction="#MostrarListaVehiculos" prefHeight="25.0" prefWidth="174.0" />
+      <ComboBox fx:id="CoxCliente" layoutX="44.0" layoutY="167.0" onAction="#MostrarListaClientes" prefHeight="25.0" prefWidth="174.0" />
+      <DatePicker fx:id="DateInicio" layoutX="44.0" layoutY="73.0" onAction="#InicioReserva" />
+      <DatePicker fx:id="DateFinal" layoutX="44.0" layoutY="113.0" onAction="#FinalReserva" />
+      <Label layoutX="277.0" layoutY="77.0" text="Fecha Inicio" />
+      <Label layoutX="277.0" layoutY="117.0" text="Fecha Final " />
+      <Label layoutX="288.0" layoutY="171.0" text="Cliente " />
+      <Label layoutX="283.0" layoutY="233.0" text="Vehiculo " />
+      <Separator layoutX="10.0" layoutY="300.0" prefHeight="5.0" prefWidth="368.0" />
+      <TableView layoutX="10.0" layoutY="305.0" prefHeight="197.0" prefWidth="368.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Cliente " />
+          <TableColumn prefWidth="75.0" text="Vehiculo " />
+            <TableColumn prefWidth="75.0" text="Fecha Inicio " />
+            <TableColumn prefWidth="75.0" text="Fecha Final" />
+        </columns>
+      </TableView>
+      <Button fx:id="ButonAgregar" layoutX="161.0" layoutY="269.0" mnemonicParsing="false" onAction="#AgregarReserva" text="Agregar " />
+      <Button fx:id="ButonEliminar" layoutX="168.0" layoutY="513.0" mnemonicParsing="false" onAction="#EliminarReserva" text="Eliminar " />
+   </children>
+</AnchorPane>
