@@ -33,7 +33,7 @@ public class Camion extends Vehiculo {
     
 
     @Override
-    public double calcularCosto(Ruta ruta, List<Paquete> paquetes) {
+    public double calcularCosto(Ruta ruta, Envio envio, List<Paquete> paquetes) {
         // Costo de los peajes
         double costoPeajes = ruta.getPeaje() * 12000;
 

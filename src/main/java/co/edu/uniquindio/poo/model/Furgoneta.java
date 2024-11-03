@@ -29,7 +29,7 @@ public class Furgoneta extends Vehiculo{
         this.envio = envio;
     }
     @Override
-    public double calcularCosto(Ruta ruta, List<Paquete> paquetes) {
+    public double calcularCosto(Ruta ruta, Envio envio, List<Paquete> paquetes) {
         // Datos quemados
         double costoCombustiblePorKm = 3000; // 3000 pesos por km
         double fleteFijo = 10000; // Flete fijo de 10,000 pesos

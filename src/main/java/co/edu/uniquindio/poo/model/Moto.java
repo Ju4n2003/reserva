@@ -19,11 +19,11 @@ public class Moto extends Vehiculo  {
     }
 
     @Override
-    public double calcularCosto(Ruta ruta, List<Paquete> paquetes) {
+    public double calcularCosto(Ruta ruta, Envio envio, List<Paquete> paquetes) {
         double costoPorPaquete;
 
         // Determina el costo fijo en función de la zona
-        if (ruta.getZona() == Zona.RURAL) {
+        if (envio.getZona() == Zona.RURAL) {
             costoPorPaquete = 15000;
         } else { // Zona URBANA
             costoPorPaquete = 8000;

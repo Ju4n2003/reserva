@@ -3,7 +3,7 @@ package co.edu.uniquindio.poo.model;
 public class Ruta {
     private int peaje;
     private double distancia;
-    private Zona zona ;
+
 
     public Ruta(int peaje,double distancia ) {
         this.peaje = peaje;
@@ -27,15 +27,6 @@ public class Ruta {
         this.distancia = distancia;
     }
 
-    public Zona getZona() {
-        return zona;
-    }
-
-    public void setZona(Zona zona) {
-        this.zona = zona;
-    }
-    
-    
 
     
 

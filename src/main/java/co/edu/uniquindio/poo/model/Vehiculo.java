@@ -31,7 +31,7 @@ public abstract class Vehiculo {
         this.marca = marca;
     }
 
-    public abstract double calcularCosto( Ruta ruta, List<Paquete> paquetes); 
+    public abstract double calcularCosto( Ruta ruta, Envio envio, List<Paquete> paquetes ); 
 }
 
     
