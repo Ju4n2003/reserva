@@ -1,6 +1,5 @@
 package co.edu.uniquindio.poo.model;
 
-import java.util.List;
 
 public abstract class Vehiculo {
     private String matricula;

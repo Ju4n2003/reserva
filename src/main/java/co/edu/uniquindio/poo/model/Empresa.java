@@ -1,5 +1,5 @@
 package co.edu.uniquindio.poo.model;
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Empresa {
@@ -9,8 +9,8 @@ public class Empresa {
 
     public Empresa(String nombre) {
         this.nombre = nombre;
-        this.vehiculos = new ArrayList<>();
-        this.reservas = new ArrayList<>();
+        this.vehiculos = new LinkedList<>();
+        this.reservas = new LinkedList<>();
     }
 
     public String getNombre() {
