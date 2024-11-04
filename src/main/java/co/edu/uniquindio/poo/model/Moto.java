@@ -1,39 +1,26 @@
 package co.edu.uniquindio.poo.model;
 
-import java.util.List;
+public class Moto extends Vehiculo {
+    private boolean esAutomatica;
 
-public class Moto extends Vehiculo  {
-    private String cilindrada ;
-
-    public Moto(String placa, String modelo, String marca, String cilindrada) {
-        super(placa, modelo, marca);
-        this.cilindrada = cilindrada;
+    public Moto(String matricula, String marca, String modelo, int anioFabricacion, boolean esAutomatica) {
+        super(matricula, marca, modelo, anioFabricacion);
+        this.esAutomatica = esAutomatica;
     }
 
-    public String getCilindrada() {
-        return cilindrada;
+    public boolean isEsAutomatica() {
+        return esAutomatica;
     }
 
-    public void setCilindrada(String cilindrada) {
-        this.cilindrada = cilindrada;
+    public void setEsAutomatica(boolean esAutomatica) {
+        this.esAutomatica = esAutomatica;
     }
 
     @Override
-    public double calcularCosto(Ruta ruta, Envio envio, List<Paquete> paquetes) {
-        double costoPorPaquete;
-
-        // Determina el costo fijo en función de la zona
-        if (envio.getZona() == Zona.RURAL) {
-            costoPorPaquete = 15000;
-        } else { // Zona URBANA
-            costoPorPaquete = 8000;
-        }
-
-        // Calcula el costo total multiplicando el costo por paquete por el número de paquetes
-        return costoPorPaquete * paquetes.size();
+    public double calcularCostoReserva(int dias) {
+        double tarifaBase = 30.0; // Ejemplo de tarifa base por día
+        double tarifaAdicional = esAutomatica ? 10.0 : 0.0;
+        return (tarifaBase + tarifaAdicional) * dias;
     }
-
-    
-
-    
 }
+

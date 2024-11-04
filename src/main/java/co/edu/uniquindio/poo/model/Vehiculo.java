@@ -3,35 +3,54 @@ package co.edu.uniquindio.poo.model;
 import java.util.List;
 
 public abstract class Vehiculo {
-    public String placa;
-    public String modelo;
-    public String marca ;
+    private String matricula;
+    private String marca;
+    private String modelo;
+    private int anioFabricacion;
 
-    public Vehiculo(String placa, String modelo, String marca) {
-        this.placa = placa;
-        this.modelo = modelo;
+    // Constructor
+    public Vehiculo(String matricula, String marca, String modelo, int anoFabricacion) {
+        this.matricula = matricula;
         this.marca = marca;
-    }
-    public String getPlaca() {
-        return placa;
-    }
-    public void setPlaca(String placa) {
-        this.placa = placa;
-    }
-    public String getModelo() {
-        return modelo;
-    }
-    public void setModelo(String modelo) {
         this.modelo = modelo;
+        this.anioFabricacion = anoFabricacion;
     }
+
+    // Getters y Setters
+    public String getMatricula() {
+        return matricula;
+    }
+
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
+    }
+
     public String getMarca() {
         return marca;
     }
+
     public void setMarca(String marca) {
         this.marca = marca;
     }
 
-    public abstract double calcularCosto( Ruta ruta, Envio envio, List<Paquete> paquetes ); 
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public int getAnioFabricacion() {
+        return anioFabricacion;
+    }
+
+    public void setAnioFabricacion(int anioFabricacion) {
+        this.anioFabricacion = anioFabricacion;
+    }
+
+    // Método abstracto para calcular el costo de reserva
+    public abstract double calcularCostoReserva(int dias);
 }
 
     

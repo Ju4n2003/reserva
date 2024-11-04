@@ -1,6 +1,6 @@
 package co.edu.uniquindio.poo.viewController;
 
-public class ReservaViewController {
+
     /**
      * Sample Skeleton for 'CrudReserva.fxml' Controller Class
      */
@@ -11,8 +11,8 @@ public class ReservaViewController {
     import javafx.scene.control.Button;
     import javafx.scene.control.ComboBox;
     import javafx.scene.control.DatePicker;
-    
-    public class PleaseProvideControllerClassName {
+    import javafx.event.ActionEvent;
+    public class ReservaViewController {
     
         @FXML // ResourceBundle that was given to the FXMLLoader
         private ResourceBundle resources;
@@ -76,12 +76,10 @@ public class ReservaViewController {
             assert DateInicio != null : "fx:id=\"DateInicio\" was not injected: check your FXML file 'CrudReserva.fxml'.";
             assert CoxVehiculo != null : "fx:id=\"CoxVehiculo\" was not injected: check your FXML file 'CrudReserva.fxml'.";
             assert DateFinal != null : "fx:id=\"DateFinal\" was not injected: check your FXML file 'CrudReserva.fxml'.";
-    
         }
     }
+
     
-    
-}
 
 
-import javafx.event.ActionEvent;
+
